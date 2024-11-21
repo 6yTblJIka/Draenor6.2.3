@@ -18,7 +18,7 @@
     # include <ppl.h>
 # endif
 
-typedef ACE_TSS<SFMTRand> SFMTRandTSS;
+typedef ACE_TSS<CRandomSFMT> SFMTRandTSS;
 static SFMTRandTSS sfmtRand;
 
 #define _WINSOCK_DEPRECATED_NO_WARNINGS
@@ -57,6 +57,10 @@ double rand_chance(void)
 {
     return sfmtRand->Random() * 100.0;
 }
+
+
+#define _WINSOCK_DEPRECATED_NO_WARNINGS
+
 
 Tokenizer::Tokenizer(const std::string &src, const char sep, uint32 vectorReserve)
 {
