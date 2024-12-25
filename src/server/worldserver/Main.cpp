@@ -16,7 +16,7 @@
 #include <openssl/provider.h>
 #endif
 
-//#include <boost/dll/runtime_symbol_info.hpp>
+#include <boost/dll/runtime_symbol_info.hpp>
 #include <ace/Version.h>
 
 #include "Common.h"
@@ -34,8 +34,8 @@
 #ifdef _WIN32
 #include "ServiceWin32.h"
 char serviceName[] = "worldserver";
-char serviceLongName[] = "JadeCore world service";
-char serviceDescription[] = "JadeCore World of Warcraft emulator world service";
+char serviceLongName[] = "Draenor-Core world service";
+char serviceDescription[] = "Draenor-Coree World of Warcraft emulator world service";
 /*
  * -1 - not in service mode
  *  0 - stopped
